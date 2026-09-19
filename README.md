@@ -32,6 +32,8 @@ This is not just a hackathon project; it is a practical, high-impact solution to
 * **Low-Literacy Friendly:** Designed with simple workflows keeping rural users in mind.
 
 ---
+## Team 
+* **SOLO**
 
 ## 🛠️ Technology Stack
 * **Frontend:**  HTML-CSS
