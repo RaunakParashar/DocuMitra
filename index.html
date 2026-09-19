@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocuMitra - दस्तावेज़ मित्र (देवघर)</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <div>
+                <h1>📄 DocuMitra (दस्तावेज़ मित्र)</h1>
+                <p>देवघर, झारखंड — बिना बिचौलिए सरकारी प्रमाण पत्रों की आसान जानकारी</p>
+            </div>
+            <span class="header-badge">📍 देवघर जिला प्रशासन नागरिक सेवा</span>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Search and Filter Section -->
+        <section class="search-section">
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="docSearch" placeholder="खोजें (जैसे: खतियान, राशन, आय, पेंशन, जाति)..." />
+                <button id="voiceBtn" class="btn-voice">
+                    <span id="micIcon">🎤</span>
+                    <span id="voiceStatus">बोलकर खोजें</span>
+                </button>
+                <button id="themeToggleBtn" class="btn-theme-toggle" title="डार्क मोड बदलें">🌙</button>
+            </div>
+
+            <!-- Quick Filter Pills -->
+            <div class="filter-pills" id="filterPills">
+                <button class="pill active" data-cat="all">सभी सेवाएँ</button>
+                <button class="pill" data-cat="id">पहचान पत्र</button>
+                <button class="pill" data-cat="revenue">अंचल / राजस्व</button>
+                <button class="pill" data-cat="welfare">कल्याण व खाद्य</button>
+                <button class="pill" data-cat="civil">परिवार व नगर निगम</button>
+                <button class="pill" data-cat="labour">किसान व श्रमिक</button>
+            </div>
+        </section>
+
+        <!-- Two-Column Layout -->
+        <div class="layout-grid">
+            <!-- Left Column: Certificate List -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h2 class="section-title">दस्तावेज़ सूची</h2>
+                    <span id="docCount" class="count-badge">0 उपलब्ध</span>
+                </div>
+                <div id="docsList" class="docs-list"></div>
+            </aside>
+
+            <!-- Right Column: Detail View Card -->
+            <section class="content-area">
+                <div class="card" id="detailCard">
+                    <div class="card-header">
+                        <div>
+                            <span id="docTag" class="tag">राजस्व विभाग</span>
+                            <h2 id="docTitle" class="doc-title">जाति प्रमाण पत्र</h2>
+                            <p id="docDesc" class="doc-desc">विवरण लोड हो रहा है...</p>
+                        </div>
+                        <button id="ttsBtn" class="btn btn-primary">🔊 सुनें</button>
+                        <button id="ttsPauseBtn" class="btn btn-secondary" style="display:none;">⏸️ रोकें</button>
+                    </div>
+
+                    <!-- Metadata Badges -->
+                    <div class="meta-row">
+                        <div class="meta-box">
+                            <span class="meta-label">समय सीमा</span>
+                            <strong id="docTime" class="meta-value">15-21 दिन</strong>
+                        </div>
+                        <div class="meta-box">
+                            <span class="meta-label">सरकारी फीस</span>
+                            <strong id="docFees" class="meta-value">₹0</strong>
+                        </div>
+                        <div class="meta-box">
+                            <span class="meta-label">पोर्टल लिंक</span>
+                            <a id="docPortalLink" href="#" target="_blank" class="portal-link">
+                                <span id="docPortal">Jharsewa</span> ↗
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Checklist -->
+                    <div class="checklist-section">
+                        <h3 class="checklist-heading">✅ ज़रूरी कागज़ात (चेकलिस्ट):</h3>
+                        <div id="checklistItems" class="checklist-items"></div>
+                    </div>
+
+                    <!-- Alert Tip Box -->
+                    <div id="docTip" class="tip-box">
+                        <strong>ज़रूरी सलाह:</strong> किसी बिचौलिए को अतिरिक्त पैसे न दें।
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <button id="whatsappShareBtn" class="btn-whatsapp">
+                        💬 यह लिस्ट WhatsApp पर भेजें
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 दस्तावेज़ सूची. सर्वाधिकार सुरक्षित.</p>
+    </footer>
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
